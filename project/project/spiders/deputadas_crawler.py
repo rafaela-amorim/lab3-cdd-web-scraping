@@ -55,13 +55,15 @@ class DeputadasSpider(scrapy.Spider):
 
 		#### encontra indice de gabinete
 		index_gab = -1
-		for index,s in enumerate(lista_gasto_total[2:]):
+		for index,s in enumerate(lista_gasto_total):
 			if s == 'Total Gasto':
 				index_gab = index
+				print(index_gab)
 
 		### Gastos totais
 		gasto_total_par = lista_gasto_total[1]
 		gasto_total_gab = lista_gasto_total[index_gab:][1]
+		
 
 		### busca gastos mensais
 		MESES = ['JAN','FEV','MAR','MAI','ABR','JUN','JUL','AGO','SET','OUT','NOV','DEZ']

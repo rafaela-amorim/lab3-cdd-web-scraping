@@ -57,7 +57,7 @@ class DeputadosSpider(scrapy.Spider):
 
 		#### encontra indice de gabinete
 		index_gab = -1
-		for index,s in enumerate(lista_gasto_total[2:]):
+		for index,s in enumerate(lista_gasto_total):
 			if s == 'Total Gasto':
 				index_gab = index
 
